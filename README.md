@@ -175,7 +175,7 @@ Please follow the existing code style and include tests where appropriate.
 
 ## Contact
 
-- **Rohin Sabharwal:** [rohinsabharwal@gmail.com](mailto:rohinsabharwal@gmail.com)
+- **Rohin Sabharwal:** [rohinsabharwal88@gmail.com](mailto:rohinsabharwal88@gmail.com)
 - **Sachit Sharma:** [sachitsharma@gmail.com](mailto:sachitsharma@gmail.com)
 - **Mehul Kalra:** [mehulkalra@gmail.com](mailto:mehulkalra@gmail.com)
 
@@ -191,10 +191,10 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 ## Credits
 
-**Founders:**  
-- Rohin Sabharwal (Founder)  
-- Sachit Sharma (Co-founder)  
-- Mehul Kalra (Co-founder)
+**Contributors:**  
+- Rohin Sabharwal  
+- Sachit Sharma   
+- Mehul Kalra 
 
 **Special Thanks:**  
 - All contributors and the open-source community.
