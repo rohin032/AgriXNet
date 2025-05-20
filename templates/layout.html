@@ -11,6 +11,38 @@
 	<meta name="keywords" content="Agro Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
+	<!-- css files -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/emoji-mart@latest/css/emoji-mart.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese"
+		rel="stylesheet">
+
+	<!-- JavaScript files -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
 	<style>
 		html {
 			font-size: 1rem;
@@ -95,130 +127,989 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		}
 	</style>
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-
-	</script>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	</body>
-	<!-- css files -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
-	<!-- bootstrap css -->
-	<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
-	<!-- custom css -->
-	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
-	<!-- //css files -->
-	<!-- <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png?') }}"> -->
-
-
-	<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
-
-
-	<!-- google fonts -->
-	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese"
-		rel="stylesheet">
-	<!-- //google fonts -->
-
-	<style>
-		header {
-			background-color: rgba(30, 30, 30, 1);
-			margin-top: 0rem;
-			display: block;
-
-		}
-	</style>
 </head>
 
 <body>
 
-	<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f8f9fa;">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url_for('home') }}">
-            <img src="{{ url_for('static', filename='images/logo4.png') }}" style="width: 90px; height: auto;" alt="Brand Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop Recommendation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease Prediction</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+	<!-- HEADER / NAVBAR -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" style="background-color: rgba(248, 249, 250, 0.97);">
+		<div class="container">
+			<div class="d-flex align-items-center flex-grow-1 flex-wrap flex-md-nowrap" style="min-width:0;">
+				<img src="{{ url_for('static', filename='images/agrilogo1.png') }}" alt="AgriXNet Logo" style="height: 72px; width:auto; margin-right: 16px; flex-shrink:0;">
+				<div class="d-flex flex-column flex-md-row align-items-md-center min-w-0" style="min-width:0;">
+					<span style="font-family: 'Poppins', Inter, sans-serif; font-weight:700; font-size:1.3rem; color:#28a745; line-height:1; white-space:nowrap;">AgriXNet</span>
+					<span class="ml-md-3 mt-1 mt-md-0" style="font-size:1rem; color:#555; font-family: 'Poppins', Inter, sans-serif; font-weight:400; line-height:1.1; white-space:normal;">Harnessing Interpretable AI for Smarter Farming</span>
+				</div>
+			</div>
+			<button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse flex-grow-0" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto align-items-center" style="font-family: 'Poppins', Inter, sans-serif; font-size:1rem;">
+					<li class="nav-item px-1"><a class="nav-link {% if request.endpoint == 'home' %}active{% endif %}" href="{{ url_for('home') }}">Home</a></li>
+					<li class="nav-item px-1"><a class="nav-link {% if request.endpoint == 'crop_recommend' %}active{% endif %}" href="{{ url_for('crop_recommend') }}">Crop Recommendation</a></li>
+					<li class="nav-item px-1"><a class="nav-link {% if request.endpoint == 'disease_prediction' %}active{% endif %}" href="{{ url_for('disease_prediction') }}">Disease Prediction</a></li>
+					<li class="nav-item dropdown px-1">
+						<a class="nav-link dropdown-toggle {% if request.endpoint in ['gradcam', 'lime', 'cam', 'saliency'] %}active{% endif %}" href="#" id="xaiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">XAI</a>
+						<div class="dropdown-menu" aria-labelledby="xaiDropdown">
+							<a class="dropdown-item {% if request.endpoint == 'gradcam' %}active{% endif %}" href="{{ url_for('gradcam') }}">GradCAM Visualization</a>
+							<a class="dropdown-item {% if request.endpoint == 'lime' %}active{% endif %}" href="{{ url_for('lime') }}">LIME Explanations</a>
+							<a class="dropdown-item {% if request.endpoint == 'cam' %}active{% endif %}" href="{{ url_for('cam') }}">Class Activation Maps (CAM)</a>
+							<a class="dropdown-item {% if request.endpoint == 'saliency' %}active{% endif %}" href="{{ url_for('saliency') }}">Saliency Maps</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item disabled" href="#">More coming soon...</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown px-1">
+						<a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-globe"></i> Language
+						</a>
+						<div class="dropdown-menu" aria-labelledby="languageDropdown">
+							<a class="dropdown-item" href="{{ url_for('set_language', language='en') }}">
+								<img src="{{ url_for('static', filename='images/flags/en.png') }}" alt="English" style="width: 20px; margin-right: 10px;"> English
+							</a>
+							<a class="dropdown-item" href="{{ url_for('set_language', language='hi') }}">
+								<img src="{{ url_for('static', filename='images/flags/hi.png') }}" alt="हिंदी" style="width: 20px; margin-right: 10px;"> हिंदी
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
+	<!-- Add a small margin between header and next section -->
+	<div style="height: 10px;"></div>
 
+	<!-- HOME SECTION -->
+	{% if request.endpoint == 'home' %}
+	<section class="hero-section" style="padding-top: 90px; padding-bottom: 40px; background: linear-gradient(120deg, #e8f5e9 0%, #f8fff8 100%);">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 mb-4 mb-lg-0">
+					<h1 class="display-4" style="font-family: 'Poppins', Inter, sans-serif; font-weight:700; color:#28a745; font-size:2.5rem;">AgriXNet</h1>
+					<p class="lead" style="font-size:1.1rem; color:#333;">AgriXNet is an advanced web-based platform combining the power of Deep Learning with Explainable AI to help farmers and agronomists make informed decisions. The system enables image-based plant disease detection and contextual crop recommendation based on real-time parameters. It ensures trust and transparency through interpretable outputs using Grad-CAM, LIME, and other XAI tools.</p>
+					<a href="{{ url_for('disease_prediction') }}" class="btn btn-success btn-lg mt-3 shadow-sm" style="border-radius: 30px; font-weight:600;">Try Disease Prediction</a>
+				</div>
+				<div class="col-lg-6 text-center">
+					<img src="{{ url_for('static', filename='images/futuristic-technology-concept.jpg') }}" alt="AI Crops Banner" class="img-fluid rounded shadow" style="max-height:340px; object-fit:cover;">
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-md-4 mb-3">
+					<div class="card feature-card h-100 text-center p-3 border-0 shadow-sm" style="border-radius:18px;">
+						<div class="display-4 mb-2">🧠</div>
+						<h5 class="font-weight-bold mb-2">Disease Detection via Deep Learning</h5>
+						<p class="text-muted">Upload plant images and let our AI detect diseases with high accuracy and speed.</p>
+					</div>
+				</div>
+				<div class="col-md-4 mb-3">
+					<div class="card feature-card h-100 text-center p-3 border-0 shadow-sm" style="border-radius:18px;">
+						<div class="display-4 mb-2">🌿</div>
+						<h5 class="font-weight-bold mb-2">Smart Crop Recommendation using ML</h5>
+						<p class="text-muted">Get tailored crop suggestions based on soil, weather, and environmental data.</p>
+					</div>
+				</div>
+				<div class="col-md-4 mb-3">
+					<div class="card feature-card h-100 text-center p-3 border-0 shadow-sm" style="border-radius:18px;">
+						<div class="display-4 mb-2">📊</div>
+						<h5 class="font-weight-bold mb-2">Explainable AI for Transparent Insights</h5>
+						<p class="text-muted">Visualize and understand AI decisions with Grad-CAM, LIME, and more.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% endif %}
 
+	<!-- Search Bar -->
+	<div id="searchBar" class="search-bar" style="display: none;">
+		<div class="container">
+			<form class="search-form" action="{{ url_for('search') }}" method="GET">
+				<input type="text" name="q" placeholder="Search for features, crops, diseases..." class="form-control">
+				<button type="submit" class="btn btn-primary">
+					<i class="fa fa-search"></i>
+				</button>
+			</form>
+		</div>
+	</div>
 
-
-	{% block body %} {% endblock %}
+	<!-- Add padding to body to account for fixed navbar -->
+	<div style="padding-top: 76px;">
+		{% block body %} {% endblock %}
+	</div>
 
 	<!-- footer -->
-	<footer class="text-center py-5">
-		<div class="container py-md-3">
-			<!-- logo -->
-			<h2 class="logo2 text-center">
-				<a href="{{ url_for('home') }}">
-					AgriVision
+	<footer class="footer py-4" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-top: 1px solid #e0e0e0;">
+		<div class="container text-center">
+			<div class="mb-2">
+				<strong>Founders:</strong> Rohin Sabharwal (Founder), Sachit Sharma (Co-founder), Mehul Kalra (Co-founder)
+			</div>
+			<div class="footer-links mb-2" style="font-size:1rem;">
+				<a href="{{ url_for('home') }}">Home</a> |
+				<a href="{{ url_for('crop_recommend') }}">Crop Recommendation</a> |
+				<a href="{{ url_for('disease_prediction') }}">Disease Prediction</a> |
+				<a href="/about">About</a> |
+				<a href="/contact">Contact</a>
+			</div>
+			<div class="footer-contact mb-2" style="font-size:1rem;">
+				<span>Contact: 
+					<a href="mailto:rohinsabharwal@gmail.com">rohinsabharwal@gmail.com</a>,
+					<a href="mailto:sachitsharma@gmail.com">sachitsharma@gmail.com</a>,
+					<a href="mailto:mehulkalra@gmail.com">mehulkalra@gmail.com</a>
+				</span>
+			</div>
+			<div class="footer-social mb-2" style="gap: 24px;">
+				<a href="https://github.com/rohin032/AgriXNet.git" target="_blank" rel="noopener" class="footer-icon" title="GitHub" style="margin:0 10px; color:#333; font-size:2.1rem; display:inline-flex; align-items:center;">
+					<!-- GitHub SVG -->
+					<svg height="32" width="32" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style="display:block;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
 				</a>
-			</h2>
-			<!-- //logo -->
-			<!-- address -->
-			<div class="contact-left-footer mt-4">
-
-
-
-
-
-				<!-- <a href="community.html">Community</a> -->
-				</p>
+				<a href="https://www.linkedin.com/in/rohinsabharwal/" target="_blank" rel="noopener" class="footer-icon" title="LinkedIn" style="margin:0 10px; color:#0077b5; font-size:2.1rem; display:inline-flex; align-items:center;">
+					<!-- LinkedIn SVG -->
+					<svg height="32" width="32" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="display:block;"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.09 107.3 0 83.2 0 53.6A53.6 53.6 0 0 1 53.6 0a53.6 53.6 0 0 1 53.6 53.6c0 29.6-24.09 53.7-53.36 53.7zM447.8 448h-92.4V302.4c0-34.7-12.4-58.4-43.3-58.4-23.6 0-37.6 15.8-43.7 31.1-2.3 5.6-2.8 13.4-2.8 21.2V448h-92.4s1.2-242.1 0-267.1h92.4v37.8c12.3-19 34.3-46.1 83.5-46.1 60.9 0 106.7 39.8 106.7 125.4V448z"/></svg>
+				</a>
 			</div>
-			<div class="w3l-copy text-center">
-				<p class="text-da">An Environmental Intelligence Startup<br> </p>
+			<div style="color:#6c757d; font-size:0.95rem;">
+				&copy; 2025 XAGRI-GRID. All rights reserved.
 			</div>
-			<p class="homelogo">
-
-			
 		</div>
 	</footer>
-	<!-- //footer -->
 
-	<!-- move top icon -->
-	<a href="#home" class="move-top text-center"></a>
-	<!-- //move top icon -->
+	<!-- Back to Top Button -->
+	<a href="#" class="back-to-top" style="display: none;">
+		<i class="fa fa-arrow-up"></i>
+	</a>
+
+	<style>
+	/* Navigation Styles */
+	.navbar {
+		transition: all 0.3s ease;
+	}
+
+	.navbar-brand img {
+		transition: transform 0.3s ease;
+	}
+
+	.nav-link {
+		position: relative;
+		padding: 0.5rem 1rem;
+		transition: color 0.3s ease;
+	}
+
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		bottom: 0;
+		left: 50%;
+		background-color: #28a745;
+		transition: all 0.3s ease;
+	}
+
+	.nav-link:hover::after,
+	.nav-link.active::after {
+		width: 100%;
+		left: 0;
+	}
+
+	/* Search Bar Styles */
+	.search-bar {
+		background: #fff;
+		padding: 1rem 0;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		position: fixed;
+		top: 76px;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+	}
+
+	.search-form {
+		display: flex;
+		gap: 10px;
+	}
+
+	/* Footer Styles */
+	.footer {
+		background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	}
+
+	.footer h5 {
+		color: #28a745;
+		font-weight: 600;
+	}
+
+	.footer ul li {
+		margin-bottom: 0.5rem;
+	}
+
+	.footer ul li a {
+		color: #6c757d;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.footer ul li a:hover {
+		color: #28a745;
+	}
+
+	.social-links a {
+		color: #6c757d;
+		font-size: 1.2rem;
+		transition: color 0.3s ease;
+	}
+
+	.social-links a:hover {
+		color: #28a745;
+	}
+
+	.newsletter-form .form-control {
+		border-radius: 20px 0 0 20px;
+		border: 1px solid #ced4da;
+	}
+
+	.newsletter-form .btn {
+		border-radius: 0 20px 20px 0;
+		background-color: #28a745;
+		border-color: #28a745;
+	}
+
+	/* Back to Top Button */
+	.back-to-top {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: 40px;
+		height: 40px;
+		background-color: #28a745;
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		opacity: 0;
+		transition: all 0.3s ease;
+		z-index: 1000;
+	}
+
+	.back-to-top:hover {
+		background-color: #218838;
+		color: white;
+		transform: translateY(-3px);
+	}
+
+	.back-to-top.show {
+		opacity: 1;
+	}
+
+	/* Responsive Adjustments */
+	@media (max-width: 768px) {
+		.navbar {
+			padding: 0.5rem 1rem;
+		}
+		
+		.footer {
+			text-align: center;
+		}
+		
+		.footer .text-md-right {
+			text-align: center !important;
+			margin-top: 1rem;
+		}
+	}
+
+	.footer-social {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 18px;
+		margin-bottom: 8px;
+	}
+	.footer-icon {
+		transition: color 0.2s, transform 0.2s;
+		text-decoration: none;
+	}
+	.footer-icon:hover {
+		color: #28a745 !important;
+		transform: scale(1.15);
+	}
+	</style>
+
+	<script>
+	// Back to Top Button
+	window.onscroll = function() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.querySelector('.back-to-top').style.display = 'flex';
+		} else {
+			document.querySelector('.back-to-top').style.display = 'none';
+		}
+	};
+
+	// Smooth scroll for back to top
+	document.querySelector('.back-to-top').addEventListener('click', function(e) {
+		e.preventDefault();
+		window.scrollTo({top: 0, behavior: 'smooth'});
+	});
+
+	// Search Bar Toggle
+	function toggleSearch() {
+		const searchBar = document.getElementById('searchBar');
+		searchBar.style.display = searchBar.style.display === 'none' ? 'block' : 'none';
+	}
+
+	// Close search bar when clicking outside
+	document.addEventListener('click', function(e) {
+		const searchBar = document.getElementById('searchBar');
+		const searchButton = document.querySelector('.fa-search').parentElement;
+		if (!searchBar.contains(e.target) && !searchButton.contains(e.target)) {
+			searchBar.style.display = 'none';
+		}
+	});
+	</script>
+
+	<!-- Chat Widget -->
+	<div class="chat-widget">
+		<button class="chat-button" onclick="toggleChat()" id="chatButton">
+			<span class="support-avatar-emoji">👩‍💼</span>
+			<span class="notification-badge" id="chatNotification" style="display:none;">1</span>
+		</button>
+		<div class="chat-window" id="chatWindow" style="display: none;">
+			<div class="chat-header" id="chatHeader">
+				Support Chat
+			</div>
+			<div class="chat-messages" id="chatMessages">
+				<div class="message bot-message">
+					<span class="avatar">👩‍💼</span>
+					<span>Hello! How can I help you today?</span>
+					<div class="message-time" id="initialMessageTime"></div>
+				</div>
+			</div>
+			<div class="quick-replies" id="quickReplies">
+				<button class="quick-reply-button" onclick="useQuickReply('Tell me about crop recommendations')">Crop Recommendations</button>
+				<button class="quick-reply-button" onclick="useQuickReply('How does disease prediction work?')">Disease Prediction</button>
+				<button class="quick-reply-button" onclick="useQuickReply('Explain XAI features')">XAI Features</button>
+			</div>
+			<div class="chat-input">
+				<button class="emoji-button" onclick="toggleEmojiPicker()">😊</button>
+				<div class="emoji-picker" id="emojiPicker"></div>
+				<input type="text" id="messageInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+				<button onclick="sendMessage()">Send</button>
+			</div>
+		</div>
+	</div>
+
+	<style>
+	/* Chat Widget Styles */
+	.chat-widget {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 1000;
+	}
+
+	.chat-button {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: #28a745;
+		color: white;
+		border: none;
+		cursor: pointer;
+		box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		font-size: 2rem;
+	}
+
+	.chat-button:hover, .chat-button:focus {
+		transform: scale(1.08) rotate(-6deg);
+		background-color: #218838;
+		box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+	}
+
+	.notification-badge {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background: #ff3b3b;
+		color: #fff;
+		border-radius: 50%;
+		width: 18px;
+		height: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.9rem;
+		font-weight: bold;
+		box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+	}
+
+	.chat-window {
+		display: none;
+		position: fixed;
+		bottom: 90px;
+		right: 20px;
+		width: 370px;
+		height: 540px;
+		background: #fff;
+		border-radius: 16px;
+		box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+		overflow: hidden;
+		animation: chatOpen 0.35s cubic-bezier(.25,.8,.25,1);
+		border: 1.5px solid #e0e0e0;
+		display: flex;
+		flex-direction: column;
+		z-index: 1000;
+	}
+
+	@keyframes chatOpen {
+		0% { transform: scale(0.8) translateY(40px); opacity: 0; }
+		100% { transform: scale(1) translateY(0); opacity: 1; }
+	}
+
+	.chat-header {
+		background: #28a745;
+		color: #fff;
+		padding: 18px 20px 12px 20px;
+		font-weight: bold;
+		font-size: 1.2rem;
+		border-radius: 16px 16px 0 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.chat-messages {
+		flex: 1 1 auto;
+		height: 1px;
+		overflow-y: auto;
+		padding: 18px 12px 0 12px;
+		scroll-behavior: smooth;
+		background: linear-gradient(180deg, #f8fff8 0%, #f3f3f3 100%);
+	}
+
+	.chat-messages::-webkit-scrollbar {
+		width: 8px;
+		background: #e0e0e0;
+		border-radius: 8px;
+	}
+	.chat-messages::-webkit-scrollbar-thumb {
+		background: #b2dfb2;
+		border-radius: 8px;
+	}
+
+	.message {
+		margin-bottom: 14px;
+		padding: 12px 16px 8px 16px;
+		border-radius: 18px;
+		max-width: 80%;
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+		font-size: 1rem;
+		word-break: break-word;
+	}
+
+	.user-message {
+		background: #28a745;
+		color: #fff;
+		margin-left: auto;
+		flex-direction: row-reverse;
+		border-bottom-right-radius: 6px;
+		border-top-right-radius: 18px;
+		border-top-left-radius: 18px;
+		border-bottom-left-radius: 18px;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	}
+
+	.bot-message {
+		background: linear-gradient(135deg, #e6f9e6 0%, #b6e7c9 100%);
+		color: #1b4d2b;
+		margin-right: auto;
+		border-bottom-left-radius: 6px;
+		border-top-right-radius: 18px;
+		border-top-left-radius: 18px;
+		border-bottom-right-radius: 18px;
+		box-shadow: 0 2px 8px rgba(44, 180, 99, 0.08);
+	}
+
+	.avatar {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		margin: 0 10px 0 0;
+		background: #fff;
+		box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.3rem;
+	}
+
+	.user-message .avatar {
+		background: #e6f9e6;
+		color: #218838;
+		margin: 0 0 0 10px;
+	}
+
+	.bot-message .avatar {
+		background: #fff;
+		color: #28a745;
+		border: 1.5px solid #28a745;
+	}
+
+	.message-time {
+		font-size: 0.75rem;
+		color: #888;
+		margin-top: 6px;
+		margin-left: 2px;
+		text-align: right;
+		font-weight: 400;
+	}
+
+	.feedback-btn {
+		background: none;
+		border: none;
+		color: #28a745;
+		font-size: 1rem;
+		margin-left: 4px;
+		cursor: pointer;
+		transition: color 0.2s;
+		opacity: 0.7;
+	}
+
+	.feedback-btn:hover {
+		color: #1b4d2b;
+		opacity: 1;
+	}
+
+	.quick-replies {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 10px;
+		padding: 0 15px 10px 15px;
+		background: #f8f8f8;
+		border-radius: 0 0 12px 12px;
+	}
+
+	.quick-reply-button {
+		background: #f0f0f0;
+		border: none;
+		border-radius: 15px;
+		padding: 6px 14px;
+		font-size: 0.95rem;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		margin-bottom: 2px;
+	}
+
+	.quick-reply-button:hover {
+		background: #e0e0e0;
+	}
+
+	.emoji-button {
+		background: none;
+		border: none;
+		font-size: 1.2rem;
+		cursor: pointer;
+		padding: 5px 10px;
+		color: #666;
+		transition: color 0.3s ease;
+	}
+
+	.emoji-button:hover {
+		color: #28a745;
+	}
+
+	.emoji-picker {
+		display: none;
+		position: absolute;
+		bottom: 100%;
+		right: 0;
+		background: white;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		padding: 10px;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		z-index: 1000;
+	}
+
+	.emoji-picker.active {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		gap: 5px;
+	}
+
+	.emoji-item {
+		cursor: pointer;
+		padding: 5px;
+		text-align: center;
+		font-size: 1.2rem;
+		border-radius: 5px;
+		transition: background-color 0.2s ease;
+	}
+
+	.emoji-item:hover {
+		background-color: #f0f0f0;
+	}
+
+	.chat-input {
+		position: relative;
+	}
+
+	@media (max-width: 600px) {
+		.chat-window {
+			width: 98vw;
+			right: 1vw;
+			bottom: 1vw;
+			height: 80vh;
+			min-width: 0;
+		}
+		.chat-header {
+			font-size: 1rem;
+			padding: 12px 10px 8px 10px;
+		}
+		.chat-input input {
+			font-size: 0.95rem;
+		}
+	}
+	</style>
+
+	<script>
+	// Emoji data
+	const emojis = ['😊', '😂', '❤️', '👍', '🎉', '🙏', '👋', '🌱', '🌿', '🌾', '🌻', '🌺', '🍃', '🌳', '🌲', '🌵', '🌴', '🌽', '🥕', '🥬', '🥦', '🥔', '🍅', '🌶️', '🥑', '🥒', '🌽', '🥕', '🥬', '🥦', '🥔', '🍅', '🌶️', '🥑', '🥒'];
+
+	// Initialize emoji picker
+	function initializeEmojiPicker() {
+		const picker = document.getElementById('emojiPicker');
+		emojis.forEach(emoji => {
+			const span = document.createElement('span');
+			span.className = 'emoji-item';
+			span.textContent = emoji;
+			span.onclick = () => insertEmoji(emoji);
+			picker.appendChild(span);
+		});
+	}
+
+	// Toggle emoji picker
+	function toggleEmojiPicker() {
+		const picker = document.getElementById('emojiPicker');
+		picker.classList.toggle('active');
+	}
+
+	// Insert emoji into input
+	function insertEmoji(emoji) {
+		const input = document.getElementById('messageInput');
+		input.value += emoji;
+		input.focus();
+	}
+
+	// Close emoji picker when clicking outside
+	document.addEventListener('click', function(event) {
+		const picker = document.getElementById('emojiPicker');
+		const emojiButton = document.querySelector('.emoji-button');
+		if (!picker.contains(event.target) && !emojiButton.contains(event.target)) {
+			picker.classList.remove('active');
+		}
+	});
+
+	// Set initial message timestamp
+	document.addEventListener('DOMContentLoaded', function() {
+		const initialMessageTime = document.getElementById('initialMessageTime');
+		initialMessageTime.textContent = getCurrentTime();
+		initializeEmojiPicker();
+	});
+
+	function getCurrentTime() {
+		const now = new Date();
+		return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+	}
+
+	let unreadCount = 0;
+	let chatOpen = false;
+
+	// Helper to render a message div (with avatars, grouping)
+	function renderMessage(msg, group) {
+		const div = document.createElement('div');
+		div.className = `message ${msg.sender}-message` + (group ? ' grouped-message' : '');
+		const avatar = document.createElement('span');
+		avatar.className = 'avatar';
+		// Use helpdesk emoji for bot, user icon for user
+		avatar.innerHTML = msg.sender === 'user' ? '<i class="fa fa-user"></i>' : '👩‍💼';
+		const msgSpan = document.createElement('span');
+		msgSpan.textContent = msg.text;
+		const timeDiv = document.createElement('div');
+		timeDiv.className = 'message-time';
+		timeDiv.textContent = msg.time;
+		if (msg.sender === 'user') {
+			div.appendChild(avatar);
+			div.appendChild(msgSpan);
+		} else {
+			div.appendChild(avatar);
+			div.appendChild(msgSpan);
+		}
+		div.appendChild(timeDiv);
+		return div;
+	}
+
+	// Improved typing indicator: show animated dots and hide on response
+	function showTypingIndicator() {
+		const typingIndicator = document.getElementById('typingIndicator');
+		if (typingIndicator) typingIndicator.style.display = 'block';
+	}
+	function hideTypingIndicator() {
+		const typingIndicator = document.getElementById('typingIndicator');
+		if (typingIndicator) typingIndicator.style.display = 'none';
+	}
+
+	// Add feedback button to bot replies
+	function addFeedbackButton(messageDiv) {
+		const feedbackDiv = document.createElement('div');
+		feedbackDiv.style.marginTop = '4px';
+		feedbackDiv.innerHTML = '<button class="btn btn-sm btn-outline-success" style="font-size:0.8rem;padding:2px 8px;" onclick="alert(\'Thank you for your feedback!\')">👍 Helpful</button>';
+		messageDiv.appendChild(feedbackDiv);
+	}
+
+	// Add or update quick replies
+	function renderQuickReplies() {
+		const quickReplies = document.getElementById('quickReplies');
+		if (!quickReplies) return;
+		quickReplies.innerHTML = '';
+		const suggestions = [
+			'What crops are best for summer?',
+			'How do I detect plant disease?',
+			'Explain XAI features',
+			'Can you fetch weather info?',
+			'Thank you!'
+		];
+		suggestions.forEach(text => {
+			const btn = document.createElement('button');
+			btn.className = 'quick-reply-button';
+			btn.textContent = text;
+			btn.onclick = () => { document.getElementById('messageInput').value = text; sendMessage(); };
+			quickReplies.appendChild(btn);
+		});
+	}
+
+	// Auto-focus input on open
+	async function openChatAndLoadHistory() {
+		const chatWindow = document.getElementById('chatWindow');
+		const chatMessages = document.getElementById('chatMessages');
+		const chatHeader = document.querySelector('.chat-header');
+		chatWindow.style.display = 'block';
+		// Fetch history
+		const resp = await fetch('/chat', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ message: '__history__' })
+		});
+		const data = await resp.json();
+		chatMessages.innerHTML = '';
+		if (data.history && data.history.length > 0) {
+			let prevSender = null;
+			data.history.forEach(msg => {
+				const group = prevSender === msg.sender;
+				const div = renderMessage(msg, group);
+				if (msg.sender === 'bot') addFeedbackButton(div);
+				chatMessages.appendChild(div);
+				prevSender = msg.sender;
+			});
+			chatMessages.scrollTop = chatMessages.scrollHeight;
+		} else {
+			const div = renderMessage({sender:'bot',text:'Hello! I am your agri-support assistant. How can I help you today?',time:getCurrentTime()}, false);
+			addFeedbackButton(div);
+			chatMessages.appendChild(div);
+		}
+		// Greet user by name if available
+		if (data.reply && data.reply.startsWith('Please log in')) {
+			chatHeader.innerHTML = `Support Chat <span style='color:red;font-size:0.9rem;'>(<a href='/login' style='color:red;'>Login to chat</a>)</span>`;
+		} else if (data.history && data.history.length > 0) {
+			const userMsg = data.history.find(m => m.sender === 'user');
+			const username = userMsg ? userMsg.text.split(' ')[0] : '';
+			chatHeader.innerHTML = `Support Chat <span style='color:#28a745;font-size:0.9rem;'>Hi, ${username || 'User'}!</span> <a href='/logout' style='color:#888;font-size:0.8rem;margin-left:10px;'>Logout</a>`;
+		} else {
+			chatHeader.innerHTML = `Support Chat`;
+		}
+		renderQuickReplies();
+		// Auto-focus input
+		setTimeout(() => {
+			const input = document.getElementById('messageInput');
+			if (input) input.focus();
+		}, 200);
+	}
+
+	// Override toggleChat to load history
+	function toggleChat() {
+		const chatWindow = document.getElementById('chatWindow');
+		const chatButton = document.getElementById('chatButton');
+		const notification = document.getElementById('chatNotification');
+		chatOpen = !chatOpen;
+		if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+			openChatAndLoadHistory();
+			unreadCount = 0;
+			notification.style.display = 'none';
+		} else {
+			chatWindow.style.display = 'none';
+		}
+	}
+
+	// Sound effects
+	const messageSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-software-interface-start-2574.mp3');
+	const notificationSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-notification-alert-bells-286.mp3');
+	let isMuted = false;
+
+	// Toggle mute
+	function toggleMute() {
+		isMuted = !isMuted;
+		const muteButton = document.getElementById('muteButton');
+		muteButton.textContent = isMuted ? '🔇' : '🔊';
+		muteButton.classList.toggle('muted');
+	}
+
+	// Play sound
+	function playSound(sound) {
+		if (!isMuted) {
+			sound.currentTime = 0;
+			sound.play().catch(() => {});
+		}
+	}
+
+	// Clear chat
+	function clearChat() {
+		const chatMessages = document.getElementById('chatMessages');
+		chatMessages.innerHTML = `
+			<div class="message bot-message">
+				<span class="avatar"><i class="fa fa-leaf"></i></span>
+				<span>Hello! How can I help you today?</span>
+				<div class="message-time">${getCurrentTime()}</div>
+			</div>
+			<div class="typing-indicator" id="typingIndicator">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		`;
+	}
+
+	// Use quick reply
+	function useQuickReply(text) {
+		const input = document.getElementById('messageInput');
+		input.value = text;
+		sendMessage();
+	}
+
+	// Dummy older messages for 'Load More'
+	const olderMessages = [
+		{ sender: 'bot', text: 'Welcome back! Need any help today?', time: '09:00' },
+		{ sender: 'user', text: 'What crops are best for summer?', time: '09:01' },
+		{ sender: 'bot', text: 'For summer, you can try maize, millet, or pulses.', time: '09:02' }
+	];
+	let loadedOldMessages = false;
+
+	document.getElementById('loadMoreBtn').onclick = function() {
+		if (!loadedOldMessages) {
+			const chatMessages = document.getElementById('chatMessages');
+			const typingIndicator = document.getElementById('typingIndicator');
+			olderMessages.reverse().forEach(msg => {
+				const msgDiv = createMessageDiv(msg.sender, msg.text, msg.time, false);
+				chatMessages.insertBefore(msgDiv, chatMessages.firstChild.nextSibling); // after Load More
+			});
+			loadedOldMessages = true;
+			this.style.display = 'none';
+		}
+	};
+
+	function createMessageDiv(sender, text, time, group) {
+		const div = document.createElement('div');
+		div.className = `message ${sender}-message` + (group ? ' grouped-message' : '');
+		const avatar = document.createElement('span');
+		avatar.className = 'avatar';
+		avatar.innerHTML = sender === 'user' ? '<i class="fa fa-user"></i>' : '👩‍💼';
+		const msgSpan = document.createElement('span');
+		msgSpan.textContent = text;
+		const timeDiv = document.createElement('div');
+		timeDiv.className = 'message-time';
+		timeDiv.textContent = time || getCurrentTime();
+		if (sender === 'user') {
+			div.appendChild(avatar);
+			div.appendChild(msgSpan);
+		} else {
+			div.appendChild(avatar);
+			div.appendChild(msgSpan);
+		}
+		div.appendChild(timeDiv);
+		return div;
+	}
+
+	// Enhanced send message function with improved error handling and feedback
+	function sendMessage() {
+		const input = document.getElementById('messageInput');
+		const message = input.value.trim();
+		if (message) {
+			const chatMessages = document.getElementById('chatMessages');
+			let group = false;
+			const lastMsg = Array.from(chatMessages.querySelectorAll('.message')).pop();
+			if (lastMsg && lastMsg.classList.contains('user-message')) group = true;
+			const userMessageDiv = createMessageDiv('user', message, null, group);
+			chatMessages.appendChild(userMessageDiv);
+			playSound(messageSound);
+			input.value = '';
+			chatMessages.scrollTop = chatMessages.scrollHeight;
+			showTypingIndicator();
+
+			// Send message to backend
+			fetch('/chat', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ message })
+			})
+			.then(response => response.json())
+			.then(data => {
+				hideTypingIndicator();
+				let botGroup = false;
+				const lastMsg = Array.from(chatMessages.querySelectorAll('.message')).pop();
+				if (lastMsg && lastMsg.classList.contains('bot-message')) botGroup = true;
+				const botMessageDiv = createMessageDiv('bot', data.reply || 'Sorry, I could not process your request. Please try again.', null, botGroup);
+				addFeedbackButton(botMessageDiv);
+				chatMessages.appendChild(botMessageDiv);
+				chatMessages.scrollTop = chatMessages.scrollHeight;
+				playSound(notificationSound);
+				if (!chatOpen) {
+					unreadCount++;
+					document.getElementById('chatNotification').textContent = unreadCount;
+					document.getElementById('chatNotification').style.display = 'flex';
+				}
+				renderQuickReplies();
+			})
+			.catch(() => {
+				hideTypingIndicator();
+				let botGroup = false;
+				const lastMsg = Array.from(chatMessages.querySelectorAll('.message')).pop();
+				if (lastMsg && lastMsg.classList.contains('bot-message')) botGroup = true;
+				const botMessageDiv = createMessageDiv('bot', 'Sorry, there was a problem connecting to support. Please try again later.', null, botGroup);
+				addFeedbackButton(botMessageDiv);
+				chatMessages.appendChild(botMessageDiv);
+				chatMessages.scrollTop = chatMessages.scrollHeight;
+				renderQuickReplies();
+			});
+		}
+	}
+
+	// Allow Enter to send
+	function handleKeyPress(event) {
+		if (event.key === 'Enter') {
+			sendMessage();
+		}
+	}
+	</script>
 </body>
 
 </html>

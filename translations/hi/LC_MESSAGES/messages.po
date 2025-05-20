@@ -1,0 +1,138 @@
+# Hindi translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-08 15:28+0530\n"
+"PO-Revision-Date: 2025-05-08 15:28+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: hi\n"
+"Language-Team: hi <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/layout.html:170
+msgid "Home"
+msgstr "होम"
+
+#: templates/layout.html:173
+msgid "Crop Recommendation"
+msgstr "फसल अनुशंसा"
+
+#: templates/layout.html:176
+msgid "Disease Prediction"
+msgstr "रोग भविष्यवाणी"
+
+#: templates/layout.html:180
+msgid "Language"
+msgstr "भाषा"
+
+msgid "Get Informed Decisions About Your Farming Strategy"
+msgstr "अपनी खेती की रणनीति के बारे में सूचित निर्णय लें"
+
+msgid "We Help You Answer:"
+msgstr "हम आपकी मदद करते हैं:"
+
+msgid "What crop to plant here?"
+msgstr "यहां कौन सी फसल लगाएं?"
+
+msgid "Which disease do your crops have?"
+msgstr "आपकी फसलों में कौन सी बीमारी है?"
+
+msgid "How to cure the disease?"
+msgstr "बीमारी का इलाज कैसे करें?"
+
+msgid "Explore Services"
+msgstr "सेवाओं का अन्वेषण करें"
+
+msgid "Enhancing Agriculture, Enriching Lives"
+msgstr "कृषि को बढ़ावा देना, जीवन को समृद्ध करना"
+
+msgid "We leverage cutting-edge machine learning and deep learning technologies to guide you through every stage of farming. Our platform enables data-driven decisions by analyzing local demographics, crop-specific factors, and ensuring optimal crop health for maximum productivity."
+msgstr "हम आपको खेती के हर चरण में मार्गदर्शन करने के लिए अत्याधुनिक मशीन लर्निंग और डीप लर्निंग तकनीकों का उपयोग करते हैं। हमारा प्लेटफॉर्म स्थानीय जनसांख्यिकी, फसल-विशिष्ट कारकों का विश्लेषण करके और अधिकतम उत्पादकता के लिए इष्टतम फसल स्वास्थ्य सुनिश्चित करके डेटा-संचालित निर्णयों को सक्षम बनाता है।"
+
+msgid "Our Services"
+msgstr "हमारी सेवाएं"
+
+msgid "Receive expert recommendations on the most suitable crops for your specific environmental conditions."
+msgstr "अपनी विशिष्ट पर्यावरणीय परिस्थितियों के लिए सबसे उपयुक्त फसलों पर विशेषज्ञ सिफारिशें प्राप्त करें।"
+
+msgid "Identify crop diseases with precision and receive targeted treatment recommendations."
+msgstr "फसल रोगों की सटीक पहचान करें और लक्षित उपचार सिफारिशें प्राप्त करें।"
+
+msgid "All rights reserved."
+msgstr "सर्वाधिकार सुरक्षित।"
+
+msgid "Find out which disease has been caught by your plant"
+msgstr "पता करें कि आपके पौधे को कौन सी बीमारी ने पकड़ा है"
+
+msgid "Please Upload The Image"
+msgstr "कृपया छवि अपलोड करें"
+
+msgid "Predict"
+msgstr "भविष्यवाणी करें"
+
+msgid "Crop Recommendation System"
+msgstr "फसल अनुशंसा प्रणाली"
+
+msgid "Nitrogen"
+msgstr "नाइट्रोजन"
+
+msgid "Enter Nitrogen"
+msgstr "नाइट्रोजन दर्ज करें"
+
+msgid "Phosphorus"
+msgstr "फॉस्फोरस"
+
+msgid "Enter Phosphorus"
+msgstr "फॉस्फोरस दर्ज करें"
+
+msgid "Potassium"
+msgstr "पोटैशियम"
+
+msgid "Enter Potassium"
+msgstr "पोटैशियम दर्ज करें"
+
+msgid "Temperature (°C)"
+msgstr "तापमान (°C)"
+
+msgid "Enter Temperature"
+msgstr "तापमान दर्ज करें"
+
+msgid "Humidity"
+msgstr "आर्द्रता"
+
+msgid "Enter Humidity"
+msgstr "आर्द्रता दर्ज करें"
+
+msgid "pH"
+msgstr "पीएच"
+
+msgid "Enter pH value"
+msgstr "पीएच मान दर्ज करें"
+
+msgid "Rainfall (mm)"
+msgstr "वर्षा (मिमी)"
+
+msgid "Enter Rainfall"
+msgstr "वर्षा दर्ज करें"
+
+msgid "Get Recommendation"
+msgstr "सिफारिश प्राप्त करें"
+
+msgid "Recommended Crop:"
+msgstr "अनुशंसित फसल:"
+
+msgid "%(crop)s is the best crop to be cultivated right there"
+msgstr "%(crop)s वहां उगाने के लिए सबसे अच्छी फसल है"
+
+msgid "Sorry, we could not determine the best crop to be cultivated with the provided data."
+msgstr "माफ़ कीजिए, हम दिए गए डेटा के साथ सबसे अच्छी फसल निर्धारित नहीं कर सके।"
+

@@ -1,54 +1,66 @@
-{% extends 'layout.html' %} {% block body %}
-
-
-<style>
-  html body {
-    background-color: rgb(206, 206, 228);
-  }
-</style>
-<br /><br />
-  <h2 style="text-align: center; margin: 0px; color: black">
-    <b>Find out which disease has been caught by your plant</b>
-  </h2>
-  <br />
-  <br>
-
-<div style="
-    width: 350px;
-    height: 50rem;
-    margin: 0px auto;
-    color: black;
-    border-radius: 25px;
-    padding: 10px 10px;
-    font-weight: bold;
-  ">
-
-  
-
-
-  <form class="form-signin" method=post enctype=multipart/form-data>
-
-    <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
-    <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
-    <br>
-    <br>
-    <img id="output-image" class="rounded mx-auto d-block" />
-    <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold;">Predict</button>
-
-
-  </form>
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="mb-3" style="color:#28a745; font-family:'Poppins',Inter,sans-serif; font-weight:700;">Disease Prediction</h2>
+            <p class="lead" style="color:#333;">Upload a crop image, and AgriXNet identifies potential diseases using a ResNet-based deep learning model. With high accuracy and speed, this tool empowers timely intervention for crop health and yield protection.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form method="POST" action="{{ url_for('disease_prediction') }}" enctype="multipart/form-data" class="card shadow-sm p-4 mb-4" style="border-radius:18px;">
+                <div class="form-group text-center">
+                    <label for="file" class="mb-2" style="font-weight:600;">Upload Plant Image <span title="Upload a clear image of the affected plant">🌱</span></label>
+                    <div class="custom-file mb-3" style="text-align:left;">
+                        <input type="file" class="custom-file-input" id="file" name="file" accept="image/*" required onchange="document.getElementById('fileLabel').innerText=this.files[0].name">
+                        <label class="custom-file-label" for="file" id="fileLabel">Choose file...</label>
+                    </div>
+                    <div class="drop-area p-4 mb-3 border rounded" style="background:#f8fff8; cursor:pointer;" onclick="document.getElementById('file').click();">
+                        <span style="font-size:2rem;">📤</span>
+                        <div>Drag & drop or click to select an image</div>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-success btn-lg" style="border-radius: 30px; font-weight:600;">Predict Disease</button>
+                </div>
+                {% if error %}
+                <div class="alert alert-danger mt-3">{{ error }}</div>
+                {% endif %}
+            </form>
+            {% if prediction %}
+            <div class="card shadow-sm p-4 mb-4" style="border-radius:18px;">
+                <h4 class="mb-3" style="color:#28a745;">Prediction Result</h4>
+                <div class="mb-2"><span style="font-size:2rem;">🦠</span> <strong>Disease:</strong> {{ prediction.disease }}</div>
+                <div class="mb-2"><span style="font-size:1.2rem;">📈</span> <strong>Confidence:</strong> {{ prediction.confidence }}%</div>
+                <div class="mb-2"><span style="font-size:1.2rem;">💡</span> <strong>Suggested Remedies:</strong> {{ prediction.remedies }}</div>
+                <a href="{{ url_for('gradcam') }}" class="btn btn-outline-success mt-3" style="border-radius: 20px; font-weight:600;">Show Visual Explanation</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 </div>
-
-<script type="text/javascript">
-  function preview_image(event) {
-    var reader = new FileReader();
-    reader.onload = function () {
-      var output = document.getElementById('output-image')
-      output.src = reader.result;
-    }
-    reader.readAsDataURL(event.target.files[0]);
-  }
+<script>
+// Drag & drop highlight
+const dropArea = document.querySelector('.drop-area');
+if (dropArea) {
+    dropArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropArea.classList.add('bg-success', 'text-white');
+    });
+    dropArea.addEventListener('dragleave', (e) => {
+        e.preventDefault();
+        dropArea.classList.remove('bg-success', 'text-white');
+    });
+    dropArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropArea.classList.remove('bg-success', 'text-white');
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            document.getElementById('file').files = files;
+            document.getElementById('fileLabel').innerText = files[0].name;
+        }
+    });
+}
 </script>
-
-</div>
 {% endblock %}

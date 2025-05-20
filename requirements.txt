@@ -1,0 +1,13 @@
+Flask==2.2.5
+Flask-Babel
+Flask-Limiter==2.8.1
+torch
+torchvision
+pillow
+numpy
+pandas
+requests
+scikit-learn
+matplotlib
+opencv-python
+lime 
