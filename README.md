@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Agrivision1
+# AgriXNet
  
 =======
 # AgriXNet: An Interpretable Deep Learning System for Crop Disease Prediction and Recommendation
